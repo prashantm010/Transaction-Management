@@ -1,0 +1,61 @@
+Transaction Management System
+
+Problem Statement:
+You are required to develop a transaction management system that allows users to input their expense statements from multiple sources such as bank accounts, online wallets, and splitwise transactions. Each type of statement may have a different input format. The system should be able to generate a consolidated report for a queried period combining all the transactions. 
+
+Input Format:
+Statement type: bank statement/online wallet/splitwise
+Statement details:
+For bank:
+bank: SBI
+transactions: list3
+amount: 1000
+type: debit/credit
+category: rent/shopping/investment/entertainment etc
+timestamp
+For online wallet:
+provider: paytm/phonepe/sodexo
+transactions: list
+transaction_amount: 1000
+type: paid/added
+payment date
+For splitwise:
+transactions: list
+amount: 1000
+description: Grocery/Movie Tickets, etc
+added by: you/others
+type: owed/owe
+transaction date
+Query:
+Start date
+End date
+
+Output Format:
+The output should return the consolidated report of all the transactions within the queried duration
+Opening balance
+Closing balance
+Expenses Incurred
+Income Accrued
+Savings
+
+Functional Requirements:
+User should be able to 
+Add multiple transaction statements
+Query report for a duration
+
+Evaluation Criteria:
+User should be able to upload any number of statements
+Functional correctness, i.e., the reports generated for any specified duration should be correct
+Usage of correct design pattern without resorting to if/else conditional statements
+
+
+Design Pattern:
+Adapter pattern should be applied to convert individual statements into standardized format.
+Follow up questions:
+How would you efficiently calculate the report such that all the transactions need not be processed each time.
+There could be cases where a certain category of transactions are not mentioned under debit but are not really expense, e.g., investment. How would such cases be handled.
+If the user wants to track expenses on each segment, how would you provide the expense report grouped by category
+
+
+
+
